@@ -773,3 +773,47 @@ body::after {
     }
 
 }
+
+/* HERO ACTIONS */
+
+.hero-actions {
+    margin-top: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.hero-socials a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.hero-socials a:hover {
+    color: #9cc9ff;
+}
+
+.hero-socials span {
+    color: #4b5563;
+}
+
+@media (max-width: 850px) {
+
+    .hero-socials {
+        justify-content: center;
+    }
+
+}
