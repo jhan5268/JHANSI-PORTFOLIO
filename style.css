@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.logo {
+    text-decoration: none;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #0b0f19;
@@ -178,7 +182,7 @@ body > p:first-of-type {
 }
 
 .section {
-    padding: 80px 0;
+    padding: 55px 0;
 }
 
 .section h2 {
@@ -452,7 +456,7 @@ html {
     text-align: center;
     padding: 40px 0 10px;
     border-top: 1px solid #243244;
-    margin-top: 60px;
+    margin-top: 35px;
 }
 
 .footer p {
@@ -636,9 +640,13 @@ body::after {
 
 .project-image {
     width: 100%;
+    height: 260px;
+    object-fit: cover;
+
     border-radius: 12px;
     margin: 18px 0;
     border: 1px solid #243244;
+
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease;
@@ -650,7 +658,7 @@ body::after {
 }
 
 .contact-section {
-    padding: 100px 0;
+    padding: 6x0px 0;
 }
 
 
@@ -883,6 +891,142 @@ body::after {
     .nav-links a:hover {
         background: rgba(156, 201, 255, 0.08);
         border-radius: 8px;
+    }
+
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1024px) {
+
+    body {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .hero {
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        flex-basis: 300px;
+    }
+
+    .hero-image img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px 5%;
+    }
+
+    .hero {
+        min-height: auto;
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: 45px 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        line-height: 1.15;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        flex: none;
+    }
+
+    .hero-image img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .section {
+        padding: 45px 0;
+    }
+
+    .section h2,
+    .contact-section h2 {
+        font-size: 30px;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .education-grid,
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card,
+    .project-card,
+    .education-card,
+    .skill-card {
+        padding: 20px;
+    }
+
+    .project-image {
+        height: 210px;
+    }
+
+}
+
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .role-line {
+        font-size: 20px !important;
+        min-height: 60px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-socials {
+        justify-content: center;
+    }
+
+    .project-image {
+        height: 180px;
     }
 
 }
