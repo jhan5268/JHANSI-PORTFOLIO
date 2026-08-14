@@ -653,13 +653,7 @@ body::after {
     padding: 100px 0;
 }
 
-.section-number {
-    color: #9cc9ff;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-}
+
 
 .contact-section h2 {
     font-size: 42px;
