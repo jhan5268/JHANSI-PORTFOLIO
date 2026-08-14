@@ -604,3 +604,32 @@ body::after {
         transform: translateX(0);
     }
 }
+
+.role-line {
+    min-height: 45px;
+}
+
+.role-prefix {
+    color: #ffffff;
+}
+
+#typing-role {
+    color: #9cc9ff;
+}
+
+.cursor {
+    color: #9cc9ff;
+    font-weight: 300;
+    animation: cursorBlink 0.8s infinite;
+}
+
+@keyframes cursorBlink {
+
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
