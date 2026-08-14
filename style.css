@@ -473,3 +473,134 @@ html {
 
 }
 
+/* PREMIUM BACKGROUND */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.18;
+    z-index: -1;
+    animation: floatingGlow 10s ease-in-out infinite alternate;
+}
+
+body::before {
+    background: #4f8cff;
+    top: -120px;
+    left: -120px;
+}
+
+body::after {
+    background: #8b5cf6;
+    bottom: -150px;
+    right: -120px;
+    animation-delay: 2s;
+}
+
+@keyframes floatingGlow {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(70px, 40px) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-20px, 80px) scale(0.95);
+    }
+}
+
+
+/* GLASS NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+
+    background: rgba(11, 15, 25, 0.72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(156, 201, 255, 0.14);
+    border-radius: 14px;
+
+    padding: 16px 24px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* NAV LINK ANIMATION */
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    left: 0;
+    bottom: -6px;
+
+    background: #9cc9ff;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* HERO ENTRANCE */
+
+.hero-text {
+    animation: heroTextEnter 1s ease forwards;
+}
+
+.hero-image {
+    animation: heroImageEnter 1.2s ease forwards;
+}
+
+@keyframes heroTextEnter {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heroImageEnter {
+
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
