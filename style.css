@@ -633,3 +633,18 @@ body::after {
         opacity: 0;
     }
 }
+
+.project-image {
+    width: 100%;
+    border-radius: 12px;
+    margin: 18px 0;
+    border: 1px solid #243244;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 14px 35px rgba(156, 201, 255, 0.12);
+}
